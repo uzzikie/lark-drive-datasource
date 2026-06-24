@@ -11,3 +11,5 @@ dist
 .env.*
 .package.sh
 *.iml
+.gitignore
+test_plugin.py

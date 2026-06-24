@@ -1,0 +1,47 @@
+identity:
+  author: jcodes
+  name: lark-drive
+  label:
+    en_US: Lark Drive
+    zh_Hans: 飞书云盘
+  description:
+    en_US: Connect to Lark Drive (Feishu Drive) to fetch documents.
+    zh_Hans: 连接飞书云盘以获取文档。
+  icon: icon.svg
+provider_type: online_drive
+credentials_schema:
+  - name: app_id
+    type: text-input
+    required: true
+    label:
+      en_US: App ID
+      zh_Hans: App ID
+    placeholder:
+      en_US: Please enter your Lark App ID
+      zh_Hans: 请输入飞书应用 App ID
+  - name: app_secret
+    type: secret-input
+    required: true
+    label:
+      en_US: App Secret
+      zh_Hans: App Secret
+    placeholder:
+      en_US: Please enter your Lark App Secret
+      zh_Hans: 请输入飞书应用 App Secret
+  - name: default_folder_token
+    type: text-input
+    required: true
+    label:
+      en_US: Default Folder Token
+      zh_Hans: 默认文件夹 Token
+    placeholder:
+      en_US: Please enter a default folder token
+      zh_Hans: 请输入默认文件夹 Token
+    description:
+      en_US: The default folder to browse. Get it from the Feishu Drive folder URL.
+      zh_Hans: 要浏览的默认文件夹。可从飞书云盘文件夹 URL 中获取.
+datasources:
+  - datasources/lark_drive_datasource.yaml
+extra:
+  python:
+    source: provider/lark_drive_datasource.py

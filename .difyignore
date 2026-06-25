@@ -13,3 +13,4 @@ dist
 *.iml
 .gitignore
 test_plugin.py
+*.sh

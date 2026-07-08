@@ -88,7 +88,7 @@ class LarkDriveDatasource(OnlineDriveDatasource):
         credentials = self.runtime.credentials
         token = self._get_access_token(credentials)
         # 浏览路径优先级：用户当前路径 > Provider全局配置
-        prefix = request.prefix or credentials.get("default_folder_token", "")
+        prefix = (request.prefix or credentials.get("default_folder_token", "")).strip()
 
         headers = self._build_auth_headers(token)
 
@@ -125,7 +125,16 @@ class LarkDriveDatasource(OnlineDriveDatasource):
                 ]
             )
 
-        resp.raise_for_status()
+        if resp.status_code != 200:
+            try:
+                error_msg = resp.json().get("msg", resp.text[:300])
+            except ValueError:
+                error_msg = resp.text[:300]
+            raise ValueError(
+                f"Failed to list files (HTTP {resp.status_code}): {error_msg}. "
+                f"Please check: 1) App has required permissions; 2) Folder is shared with the app; 3) Folder token is valid."
+            )
+
         data = resp.json()
 
         if data.get("code") != 0:

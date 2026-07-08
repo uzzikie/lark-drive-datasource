@@ -16,7 +16,7 @@ class LarkDriveProvider(DatasourceProvider):
             
             # 1. 获取 Access Token
             resp = requests.post(
-                "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal",
+                "https://open.larksuite.com/open-apis/auth/v3/tenant_access_token/internal",
                 json={"app_id": app_id, "app_secret": app_secret},
                 timeout=30,
             )
@@ -33,7 +33,7 @@ class LarkDriveProvider(DatasourceProvider):
             
             # 2. 尝试列出根目录，验证权限并获取可用文件夹
             headers = {"Authorization": f"Bearer {token}"}
-            root_url = "https://open.feishu.cn/open-apis/drive/v1/files"
+            root_url = "https://open.larksuite.com/open-apis/drive/v1/files"
             root_params = {"page_size": 10}
             
             root_resp = requests.get(root_url, headers=headers, params=root_params, timeout=30)

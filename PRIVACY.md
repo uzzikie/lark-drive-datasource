@@ -25,7 +25,7 @@ The collected data is used exclusively for:
 
 This plugin communicates with the following third-party services:
 
-- **Lark (Feishu) Open Platform** (https://open.feishu.cn): For authentication and file access. Please refer to [Lark's Privacy Policy](https://www.larksuite.com/privacy-policy) for their data handling practices.
+- **Lark (Feishu) Open Platform** (https://open.larksuite.com): For authentication and file access. Please refer to [Lark's Privacy Policy](https://www.larksuite.com/privacy-policy) for their data handling practices.
 
 ## Changes to This Policy
 

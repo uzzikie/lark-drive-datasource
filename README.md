@@ -11,7 +11,7 @@ Fetch documents from Lark Drive (Feishu Drive) into Dify knowledge base pipeline
 
 ## Setup
 
-1. Create an app on [Lark Open Platform](https://open.feishu.cn/app) and obtain **App ID** and **App Secret**.
+1. Create an app on [Lark Open Platform](https://open.larksuite.com/app) and obtain **App ID** and **App Secret**.
 2. Add the required API permissions (see below) and publish the app version.
 3. Share the target folder with your app in Lark Drive.
 4. Install this plugin in Dify and fill in the credentials.

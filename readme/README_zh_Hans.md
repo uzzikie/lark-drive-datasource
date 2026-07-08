@@ -11,7 +11,7 @@
 
 ## 配置步骤
 
-1. 在[飞书开放平台](https://open.feishu.cn/app)创建应用，获取 **App ID** 和 **App Secret**
+1. 在[飞书开放平台](https://open.larksuite.com/app)创建应用，获取 **App ID** 和 **App Secret**
 2. 添加所需 API 权限并发布应用版本
 3. 在飞书云盘中将目标文件夹共享给应用
 4. 在 Dify 中安装插件并填写凭证

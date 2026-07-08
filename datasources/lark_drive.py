@@ -19,7 +19,7 @@ class LarkDriveDatasource(OnlineDriveDatasource):
     # ==========================
     # 飞书 API 端点常量
     # ==========================
-    FEISHU_BASE_URL = "https://open.feishu.cn/open-apis"
+    FEISHU_BASE_URL = "https://open.larksuite.com/open-apis"
     # 获取 tenant_access_token
     AUTH_URL = f"{FEISHU_BASE_URL}/auth/v3/tenant_access_token/internal"
     # 浏览文件列表
